@@ -1,4 +1,6 @@
+using Blazored.Modal;
 using MealOrdering.Client.Pages;
+using MealOrdering.Client.Utilis;
 using MealOrdering.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveWebAssemblyComponents();
+
+builder.Services.AddBlazoredModal();
+
+
 
 var app = builder.Build();
 
